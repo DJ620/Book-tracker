@@ -16,8 +16,9 @@ const BookInfo = ({ book }) => {
     <div>
       <div className="row my-4 border-top border-dark pt-4 align-items-center">
         <div className="col-12 col-md-4">
-          <h3>{book.title}</h3>
-          <h5>{book.authors[0]}</h5>
+          <h2 className="text-center">{book.title}</h2>
+          <h4 className="text-center">{book.authors[0]}</h4>
+          <div className="d-flex justify-content-center">
           <a href={book.infoLink} target="_blank"><img
             src={
               book.imageLinks
@@ -26,11 +27,13 @@ const BookInfo = ({ book }) => {
             }
             alt="book image"
           /></a>
+          </div>
         </div>
-        <div className="col-12 col-md-8">
+        <div className="col-12 col-md-8 mt-3 mt-md-0">
           <p>
             {book.description ? description : "No description on file"}
           </p>
+          <p className="">Number of pages: {book.pageCount}</p>
         </div>
       </div>
     </div>

@@ -18,9 +18,11 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className="container mt-4">
-      <label>Enter book title: </label>
-      <input type="text" value={title} onChange={e => setTitle(e.target.value)}/>
-      <button className="btn btn-dark ml-2 mb-1" onClick={handleSearch}>Search</button>
+      <div className="row d-flex justify-content-center align-items-center">
+      <label className="pt-2">Enter book title: </label>
+      <input type="text" className="ml-1" value={title} onChange={e => setTitle(e.target.value)}/>
+      <button className="btn btn-dark ml-2" onClick={handleSearch}>Search</button>
+      </div>
       {books ? books.map((book, i) => <BookInfo key={i} book={book} />) : null}
     </div>
   );
