@@ -1,10 +1,11 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Link from "next/link";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Meta from "../components/Meta.js";
 
 export default function Home() {
   return (
-    <div>
-      this is index
+    <div className="container">
+      <Meta />
     </div>
   )
 }
