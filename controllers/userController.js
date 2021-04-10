@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 
 module.exports = {
     create: function(req, res) {  
-        console.log(req.body)   
         Users=new db.User({email: req.body.email, username: req.body.username });
         db.User.register(Users, req.body.password, (err, user) => {
             if (err) {
@@ -33,8 +32,7 @@ module.exports = {
                         res.json({success: false, message: err}) 
                       }else{ 
                         const token =  jwt.sign({userId : user._id,  
-                           username:user.username}, process.env.tokenSecret,  
-                              {expiresIn: '24h'}); 
+                           username:user.username}, process.env.tokenSecret); 
                         res.json({success:true, message:"Authentication successful", token: token }); 
                       }; 
                     }); 
