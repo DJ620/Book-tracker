@@ -4,7 +4,13 @@ const passportLocalMongoose = require("passport-local-mongoose");
 
 const userSchema = new Schema({
     email: { type: String, required: true, unique: true },
-    username : {type: String, unique: true, required:true}
+    username : {type: String, unique: true, required:true},
+    books: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "BookData"
+        }
+    ]
 });
 
 userSchema.plugin(passportLocalMongoose);
