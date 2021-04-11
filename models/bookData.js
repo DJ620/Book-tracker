@@ -7,9 +7,9 @@ const BookSchema = new Schema({
     image: String,
     description: String,
     infoLink: String,
-    progressType: String,
+    progressType: {type: String, default: "Percent"},
     numPages: Number,
-    totalLocation: Number,
+    totalLocation: {type: Number, default: 0},
     sessions: [{
         location: Number,
         percent: Number,
