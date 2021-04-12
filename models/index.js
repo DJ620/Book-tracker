@@ -1,4 +1,5 @@
 module.exports = {
     User: require("./user"),
-    BookData: require("./bookData")
+    BookData: require("./bookData"),
+    SessionData: require("./bookData")
 };

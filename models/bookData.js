@@ -7,16 +7,16 @@ const BookSchema = new Schema({
     image: String,
     description: String,
     infoLink: String,
+    googleId: String,
     progressType: {type: String, default: "Percent"},
     numPages: Number,
     totalLocation: {type: Number, default: 0},
-    sessions: [{
-        location: Number,
-        percent: Number,
-        page: Number,
-        duration: Number,
-        date: Date
-    }]
+    sessions: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "SessionData"
+        }
+    ]
 });
 
 const BookData = mongoose.model("BookData", BookSchema);
