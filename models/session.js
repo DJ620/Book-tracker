@@ -5,9 +5,10 @@ const SessionSchema = new Schema({
   location: Number,
   percent: Number,
   page: Number,
+  chapter: Number,
   notes: String,
-  duration: Number,
-  date: Date,
+  duration: Object,
+  date: String,
 });
 
 const SessionData = mongoose.model("SessionData", SessionSchema);

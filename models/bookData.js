@@ -8,9 +8,16 @@ const BookSchema = new Schema({
     description: String,
     infoLink: String,
     googleId: String,
+    status: {type: String, default: "want to read"},
     progressType: {type: String, default: "Percent"},
-    numPages: Number,
+    numPages: {type: Number, default: 0},
     totalLocation: {type: Number, default: 0},
+    quotes: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "QuoteData"
+        }
+    ],
     sessions: [
         {
             type: Schema.Types.ObjectId,

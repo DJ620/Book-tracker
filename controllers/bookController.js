@@ -25,6 +25,18 @@ module.exports = {
 
     getSingleBook: function(req, res) {
         db.BookData.findOne({_id: req.params.id})
+            .populate("sessions")
+            .populate("quotes")
+            .then(dbBook => {
+                res.json(dbBook);
+            })
+            .catch(err => {
+                res.json(err);
+            });
+    },
+
+    updateBook: function(req, res) {
+        db.BookData.findOneAndUpdate({_id: req.body.bookId}, req.body.dataToUpdate)
             .then(dbBook => {
                 res.json(dbBook);
             })
@@ -34,7 +46,6 @@ module.exports = {
     },
 
     deleteBook: function(req, res) {
-        console.log("Getting here")
         db.BookData.deleteOne({_id: req.params.bookId})
             .then(data => {
                 res.json(data);

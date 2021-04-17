@@ -4,6 +4,9 @@ const bookController = require("../../controllers/bookController");
 router.route("/add")
     .post(bookController.addBook);
 
+router.route("/update")
+    .put(bookController.updateBook);
+
 router.route("/:id")
     .get(bookController.getAllBooks);
 

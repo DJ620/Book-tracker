@@ -41,5 +41,16 @@ module.exports = {
               })(req, res); 
             }; 
           }; 
+    },
+
+    verify: function(req, res) {
+      const jwToken = req.params.token;
+      jwt.verify(jwToken, process.env.tokenSecret, function(err, decoded) {
+        if (!err) {
+          res.json({success: true});
+        } else {
+          res.send(err);
+        };
+      });
     }
 };

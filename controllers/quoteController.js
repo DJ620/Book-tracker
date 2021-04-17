@@ -1,9 +1,9 @@
 const db = require("../models");
 
 module.exports = {
-    addSession: function(req, res) {
-        db.SessionData.create(req.body.session)
-            .then(({_id}) => db.BookData.findOneAndUpdate({_id: req.body.bookId}, { $push: {sessions: _id}}, {new: true}))
+    addQuote: function(req, res) {
+        db.QuoteData.create(req.body.quoteData)
+            .then(({_id}) => db.BookData.findOneAndUpdate({_id: req.body.bookId}, { $push: {quotes: _id}}, {new: true}))
             .then(dbBook => {
                 res.json(dbBook);
             })
@@ -12,8 +12,8 @@ module.exports = {
             });
     },
 
-    deleteSession: function(req, res) {
-        db.SessionData.deleteOne({_id: req.params.sessionId})
+    deleteQuote: function(req, res) {
+        db.QuoteData.deleteOne({_id: req.params.quoteId})
             .then(data => {
                 res.json(data);
             })

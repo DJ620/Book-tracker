@@ -7,4 +7,7 @@ router.route('/register')
 router.route('/login') 
     .post(userController.login);
 
+router.route("/:token")
+    .get(userController.verify);
+
 module.exports = router;
