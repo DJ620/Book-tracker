@@ -1,0 +1,26 @@
+.trash, .fas {
+    cursor: pointer;
+}
+
+.q {
+    color: white;
+}
+
+.trash:hover {
+    color: red;
+}
+
+.cog {
+    color: gray;
+}
+
+.cog:hover {
+    color: rgb(72, 71, 71);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1081px) {
+    .sidebar {
+        display: none;
+    }
+}
