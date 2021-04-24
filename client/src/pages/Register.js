@@ -13,6 +13,7 @@ const Register = () => {
 
   const register = (e) => {
     e.preventDefault();
+    setError(null);
     setLoading(true);
     api.createUser({ email, username, password }).then((res) => {
       console.log(res.data);
@@ -79,13 +80,14 @@ const Register = () => {
         <div className="row d-flex justify-content-center pt-3">
           <Spinner animation="border" />
         </div>
-      ) : error ? (
-        <p className="text-center mt-2" style={{color: "red"}}>{error}</p>
       ) : (
         <p className="text-center mt-2">
           Already have an account? Sign in <a href="/">here</a>
         </p>
       )}
+      {error ? (
+        <p className="text-center" style={{color: "red"}}>{error}</p>
+      ) : null}
     </div>
   );
 };
