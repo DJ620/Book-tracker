@@ -8,7 +8,7 @@ import Quote from "../components/Quote/Quote";
 import SettingsModal from "../components/SettingsModal";
 import Sidebar from "../components/Sidebar";
 import DeleteModal from "../components/DeleteModal";
-import { Tab, Tabs } from "react-bootstrap";
+import { Tab, Tabs, Spinner } from "react-bootstrap";
  
 const CollectedBookInfo = () => {
   const history = useHistory();
@@ -133,7 +133,11 @@ const CollectedBookInfo = () => {
   };
 
   if (!book || !duration) {
-    return <h2>Loading...</h2>;
+    return (
+      <div className="row d-flex justify-content-center pt-5">
+      <Spinner animation="border"/>
+      </div>
+      )
   }
 
   const styles = {
