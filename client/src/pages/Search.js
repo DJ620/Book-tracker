@@ -65,7 +65,7 @@ const Search = () => {
         className="row d-flex justify-content-center align-items-center mb-4"
         onSubmit={handleSearch}
       >
-        <label className="pt-2">Enter book title: </label>
+        <label className="pt-2">Title/Author: </label>
         <input
           type="text"
           className="ml-1"

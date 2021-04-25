@@ -211,7 +211,7 @@ const CollectedBookInfo = () => {
               </div>
               <div className="row d-flex justify-content-center justify-content-md-start">
                 <button
-                  className="btn btn-lg btn-info mt-2 mb-2 mb-md-0 ml-1"
+                  className="btn btn-lg btn-dark mt-2 mb-2 mb-md-0 ml-1"
                   onClick={handleShowQuoteModal}
                 >
                   Add quote
@@ -280,7 +280,7 @@ const CollectedBookInfo = () => {
                 <p>No reading sessions recorded</p>
               )}
               <button
-                className="btn btn-lg btn-success mb-3"
+                className="btn btn-lg btn-dark mb-3"
                 onClick={handleShow}
               >
                 Add reading session

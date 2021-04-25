@@ -18,3 +18,26 @@ body {
     outline-offset: none !important;
 }
 
+.btn-maroon {
+    background-color: #6f1d1b;
+    color: white;
+}
+
+.btn-maroon:hover {
+    background-color: #980906;
+    color: white;
+}
+
+.bg-munshell {
+    background-color: #21a179;
+    color: darkslategray; 
+}
+
+.btn-munshell {
+    background-color: #21a179;
+    color: darkslategray;
+}
+
+.btn-munshell:hover {
+    background-color: #0f8560;
+}
