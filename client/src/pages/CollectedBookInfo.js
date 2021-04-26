@@ -225,6 +225,11 @@ const CollectedBookInfo = () => {
                   className="cog fa fa-ellipsis-h float-right mt-1"
                   onClick={handleShowSettings}
                 />
+                <span
+                  className="cog-lg float-right mt-1"
+                  style={{fontSize: "16px"}}
+                  onClick={handleShowSettings}
+                >Settings</span>
               </h3>
               {sessions.length > 0 ? (
                 <div>
