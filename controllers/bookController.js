@@ -3,7 +3,7 @@ const db = require("../models");
 module.exports = {
     addBook: function(req, res) {
         db.BookData.create(req.body.bookData)
-            .then(({_id}) => db.User.findOneAndUpdate(req.body.userId, { $push: {books: _id}}, {new: true}))
+            .then(({_id}) => db.User.findOneAndUpdate({_id: req.body.userId}, { $push: {books: _id}}, {new: true}))
             .then(dbUser => {
                 res.json(dbUser);
             })
