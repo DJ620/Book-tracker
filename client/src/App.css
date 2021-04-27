@@ -4,13 +4,12 @@ body {
 
 .btn {
     box-shadow: 2px 2px 20px -7px black;
-    border: none !important;
-    outline: none !important;
+    /* border: none !important;
+    outline: none !important; */
 }
 
-.btn:focus {
-    outline: none !important;
-    outline-offset: none !important;
+.card {
+    background: linear-gradient(180deg, white, rgb(199, 199, 199)) !important;
 }
 
 .toggle:focus {
@@ -26,6 +25,10 @@ body {
 .btn-maroon:hover {
     background-color: #980906;
     color: white;
+}
+
+.bg-maroon {
+    background-color: #6f1d1b;
 }
 
 .bg-munshell {

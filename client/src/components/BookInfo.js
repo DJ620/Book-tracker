@@ -83,12 +83,12 @@ const BookInfo = ({ book, reloadSearch }) => {
       <div className="row d-flex justify-content-center justify-content-md-end mr-md-3">
         {isInCollection ? (
           <a href={`/${mongoBookId}`}><button
-            className="btn btn-lg btn-warning mt-md-n5"
+            className="btn btn-lg btn-dark mt-md-n5"
           >
             Go to progress page
           </button></a>
         ) : (
-          <button className="btn btn-lg btn-primary mt-md-n5" onClick={addBook}>
+          <button className="btn btn-lg btn-maroon mt-md-n5" onClick={addBook}>
             Add to collection
           </button>
         )}

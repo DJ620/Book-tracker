@@ -195,7 +195,7 @@ const CollectedBookInfo = () => {
           <h2 className="text-center mt-2">{book.author}</h2>
           <div className="d-flex justify-content-center">
             <button
-              className="btn btn-danger mt-2"
+              className="btn btn-outline-secondary mt-2"
               onClick={() => handleDelete(deleteBook)}
             >
               Delete book from collection
@@ -285,7 +285,7 @@ const CollectedBookInfo = () => {
                 <p>No reading sessions recorded</p>
               )}
               <button
-                className="btn btn-lg btn-dark mb-3"
+                className="btn btn-lg btn-maroon mb-3"
                 onClick={handleShow}
               >
                 Add reading session
