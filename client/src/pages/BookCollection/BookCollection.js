@@ -133,15 +133,15 @@ const BookCollection = () => {
                 {/* <div className="row"> */}
                 {current.length > 0 ? (
               <div className="col card shadow" style={styles.cardSm}>
-                <div className="row d-flex justify-content-center mb-2">
+                {/* <div className="row d-flex justify-content-center mb-2">
                   <h5
                     className="text-center card-header shadow mt-2 position-fixed"
                     style={styles.header}
                   >
                     Currently reading
                   </h5>
-                </div>
-                <div className="row d-flex justify-content-center my-5">
+                </div> */}
+                <div className="row d-flex justify-content-center mb-5">
                   {current.map((book) => (
                     <BookPreview key={book._id} book={book} current={true} />
                   ))}
@@ -157,15 +157,15 @@ const BookCollection = () => {
               >
                 {future.length > 0 ? (
               <div className="col card shadow" style={styles.cardSm}>
-                <div className="row d-flex justify-content-center mb-2">
+                {/* <div className="row d-flex justify-content-center mb-2">
                   <h5
                     className="text-center card-header shadow mb-n2 mt-2 position-fixed"
                     style={styles.header}
                   >
                     Books I plan to read
                   </h5>
-                </div>
-                <div className="row d-flex justify-content-center my-5">
+                </div> */}
+                <div className="row d-flex justify-content-center mb-5">
                   {future.map((book) => (
                     <BookPreview key={book._id} book={book} />
                   ))}
@@ -180,15 +180,15 @@ const BookCollection = () => {
               >
                 {done.length > 0 ? (
               <div className="col card shadow" style={styles.cardSm}>
-                <div className="row d-flex justify-content-center mb-2">
+                {/* <div className="row d-flex justify-content-center mb-2">
                   <h5
                     className="text-center card-header shadow mb-n2 mt-2 position-fixed"
                     style={styles.header}
                   >
                     Books I've read
                   </h5>
-                </div>
-                <div className="row d-flex justify-content-center my-5">
+                </div> */}
+                <div className="row d-flex justify-content-center mb-5">
                   {done.map((book) => (
                     <BookPreview key={book._id} book={book} />
                   ))}
