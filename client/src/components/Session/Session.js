@@ -80,7 +80,7 @@ const Session = ({ session, book, getBookInfo, reload, setReload, handleDelete, 
         Time spent reading: <span style={styles.highlight}>{session.duration.hours} hours{" "}
         {session.duration.minutes} minutes</span>
       </p> : null}
-      {session.chapter ? <p>Chapters read: <span style={styles.highlight}>{lastChapter} - {session.chapter}</span> ({totalChapters} chapters)</p> : null}
+      {session.chapter ? <p>Chapters read: <span style={styles.highlight}>{lastChapter} - {session.chapter}</span> {totalChapters ? <span>({totalChapters} chapters)</span>: null}</p> : null}
       {session.page ? <p>Pages read: <span style={styles.highlight}>{lastPage} - {session.page}</span> ({totalPages} pages)</p> : null}
       {session.percent ? (
         <p>Percentage read: <span style={styles.highlight}>{lastPercent}% - {session.percent}%</span> ({totalPercent}%)</p>

@@ -107,7 +107,7 @@ const Sidebar = ({ reload, currentId }) => {
       marginLeft: "auto",
       marginRight: "auto",
       width: "98.5%",
-      zIndex: "2"
+      zIndex: "3"
     },
     books: {
       margin: "0 auto",

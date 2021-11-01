@@ -42,6 +42,10 @@ const BookCollection = () => {
     }
   }, [books]);
 
+  useEffect(() => {
+    done.forEach(book => console.log(book.sessions))
+  }, [done])
+
   const styles = {
     top: {
       textShadow: "2px 2px 40px black",
