@@ -6,7 +6,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -26,11 +26,11 @@ mongoose.connect(
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
+    // useCreateIndex: true,
     useFindAndModify: false
   }
 );
 
 app.listen(PORT, () => {
-  console.log('Server listening on http://localhost:8080');
+  console.log('Server listening on http://localhost:8000');
 });
