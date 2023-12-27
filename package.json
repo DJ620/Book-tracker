@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "install-server": "npm install --force",
+    "install-server": "npm install --force && npm client-install && npm run build",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js && npm run build",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
